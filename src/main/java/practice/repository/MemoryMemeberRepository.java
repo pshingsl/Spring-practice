@@ -1,9 +1,11 @@
 package practice.repository;
 
+import org.springframework.stereotype.Repository;
 import practice.domain.Member;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemeberRepository implements MemberRepository {
     // save는 저장을 하기위해 Map 사용
     private static Map<Long, Member> store = new HashMap<>();
