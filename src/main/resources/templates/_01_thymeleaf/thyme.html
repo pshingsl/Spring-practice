@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf 실습</title>
+</head>
+<body>
+<!--th:test-->
+<h3>test/utext 사용</h3>
+<p th:text="'스프링 th:text'"></p>
+<p th:utext="'스프링 '+ ${study}"></p>
+
+<!--변수-->
+<h3>변수 사용</h3>
+<p th:text="'스프링' + ${study}"></p>
+
+ <h3>th:value</h3>
+<p>value 속성값을 지정할 때 사용</p>
+<input th:value="${won}">
+
+<h3>with</h3>
+<!-- 지역 변수를 지정해서 사용
+<p th:with="변수=${데이터}" th:text="${변수}"></p>-->
+<p th:with="temp=${char}" th:text="${temp}"></p>
+
+<!-- switch는 컨테이너 태그에 붙어야하고 th:case가 붙은 태그들은 직계자식이어야 작동 -->
+<h3>switch</h3>
+<div th:switch="${admin}">
+<p th:case="'관리자'">관리자 입니다.</p>
+<p th:case="'유저'">유저 입니다.</p>
+<p th:case="*">누구세요?</p>
+</div>
+
+<h3>if</h3>
+<p th:if="${time}>6">저녁 먹을 시간이 입니다.</p>
+<p th:unless="${time}>6">저녁 먹을 시간이 아닙니다.</p>
+
+<h3>the:each</h3>
+<div>
+    <li th:each="list: ${list}" th:text="${list}"></li>
+</div>
+
+<h3>class</h3>
+<p th:text="${book.getTitle()}"></p>
+</body>
+</html>

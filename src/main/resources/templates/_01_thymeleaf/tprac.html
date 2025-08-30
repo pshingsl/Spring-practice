@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf 실습</title>
+</head>
+<body>
+<p th:if="${age}<20">10세는 미성년자 입니다.</p>
+<p th:unless="${age}<20">20세는 성인 입니다.</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>이름</td>
+            <td>나이</td>
+        </tr>
+    </thead>
+    <tbody th:each="person : ${person}">
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.age}"></td>
+    </tbody>
+</table>
+</body>
+</html>
