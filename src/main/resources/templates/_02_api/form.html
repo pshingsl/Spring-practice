@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REST API (GET, POST)</title>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- js -->
+    <script src="/js/form.js" defer></script>
+</head>
+<body>
+<button type="button" onclick="connect();">전송</button>
+<hr>
+<h3>폼 전송 - 실습</h3>
+<fieldset>
+<form method="POST" class="form-card" id="form-test">
+    이름 <input type="text" name="name"/><br/>
+    성별 <input type="radio" name="gen"> 남자
+    <input type="radio" name="gen">여자 <br>
+    생년월일<select name="year" id="year">
+    <option>1950</option>
+</select>년
+    <select name="month" id="month">
+        <option>1</option>
+    </select>월
+    <select name="day" id="day">
+        <option>1</option>
+    </select>일
+    <br/>
+    관심사 <input type="checkbox" name="interest" value="여행"> 여행
+    <input type="checkbox" name="interest" value="패션"> 패션
+    <input type="checkbox" name="interest" value="음식"> 음식<br>
+</form>
+</fieldset>
+</body>
+</html>
