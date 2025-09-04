@@ -10,7 +10,7 @@ import practice.dto.UserDTO;
 public class RestController {
 
     // GET
-    @GetMapping("/")
+    @GetMapping("/anotation")
     public String getMain(){
         return "_02_api/req";
     }

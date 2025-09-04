@@ -1,9 +1,10 @@
-package practice.controller;
+package practice.controller.mybatis;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+
 
 @Controller
 public class ViewController {
@@ -28,7 +29,7 @@ public class ViewController {
 
     // 요청 경로 영어 문자로 된건 그대로 적고 유저아이디는 @PathVariable로 받기
     // GET /users/유저아이디/edit 요청 시 userForm.html 템플릿 뷰 변환
-    @GetMapping("/users/{id}/edit")
+    @GetMapping("/mybatis/users/{id}/edit")
     public String users3(@PathVariable String id, Model model) {
         model.addAttribute("id", id);
         return "_03_myBatis/userForm";
