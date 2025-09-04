@@ -19,7 +19,7 @@ public class UserController {
     // GET /api/users: 모든 사용자 정보를 리스트 변환
     @GetMapping
     public List<UserDTO2> listUsers() {
-        return userService.getAlls();
+        return userService.findAll();
     }
 
     // POST /api/users : 새  사용자를 생성하고 생성된 사용자 정보 변환
